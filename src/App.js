@@ -21,7 +21,7 @@ function App() {
     }
   }
 
-  async function mintHandler(filmName) {
+  const mintHandler = async(filmName) => {
     const { ethereum } = window;
     try {
       if(ethereum) {
@@ -48,13 +48,13 @@ function App() {
         <div class='img-div'>
           <img class="img-responsive" alt="Avatar: Suyun Yolu" src="https://media.paribucineverse.com/255//files/movie_posters/HO00005497_638048142804242379_avatar-suyun-yolu.png"></img>
           <h1>Avatar: Suyun Yolu</h1>
-          <button onClick={mintHandler("avatar")}class="mint-button"> Bilet Satın Al</button>
+          <button onClick={e => mintHandler("avatar")}class="mint-button"> Bilet Satın Al</button>
         </div>
 
         <div class='img-div'>
           <img class="img-responsive" alt="Menu" src="https://media.paribucineverse.com/255//files/movie_posters/HO00005484_638037649998532211_the-menu.png"></img>
           <h1>Menu</h1>
-          <button onClick={mintHandler("menu")} class="mint-button"> Bilet Satın Al</button>
+          <button onClick={e => mintHandler("menu")} class="mint-button"> Bilet Satın Al</button>
         </div>
       </body>
       
